@@ -1,6 +1,6 @@
 # 💼 Israel Akintomide - Personal Portfolio
 
-Welcome to my personal portfolio website! I'm an IT Help Desk and Cybersecurity Specialist with a strong background in technical support, network security, and system administration. This site showcases my skills, projects, certifications, and more.
+Welcome to my personal portfolio website! I'm an IT Help Desk and Cybersecurity Specialist with a strong background in technical support, network security and system administration. This site showcases my skills, projects, certifications and more.
 
 ## 🌐 Live Preview
 
