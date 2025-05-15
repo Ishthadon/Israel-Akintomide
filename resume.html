@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume - Israel Akintomide</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -17,13 +17,19 @@
       <a href="resume.html" class="active">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
   </header>
 
   <main>
     <section>
       <h2>Download My Resume</h2>
-      <p><a href="assets/resume.pdf" download>Click here to download (PDF)</a></p>
-      <iframe src="assets/resume.pdf" width="100%" height="600px"></iframe>
+      <p>
+        <a href="assets/resume.pdf" download>
+          Click here to download (PDF)
+        </a>
+      </p>
+      <iframe src="assets/resume.pdf" width="100%" height="600px" title="Resume preview"></iframe>
     </section>
   </main>
 
@@ -32,11 +38,12 @@
   </footer>
 
   <!-- Chatbot -->
-  <button id="chatbot-toggle">Chat</button>
-  <div id="chatbot-window">
+  <button id="chatbot-toggle" aria-label="Toggle chatbot">Chat</button>
+  <div id="chatbot-window" aria-live="polite" aria-hidden="true">
     <div id="chatbot-log"></div>
-    <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
+    <input type="text" id="chatbot-input" placeholder="Ask me anything..." aria-label="Chatbot input" />
   </div>
+
   <script src="js/chatbot.js"></script>
-</body>
+  </body>
 </html>

@@ -1,11 +1,11 @@
-/* Reset */
+/* === Reset === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* === Body === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f9fc;
@@ -14,7 +14,7 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* === Header === */
 header {
   text-align: center;
   padding: 30px 20px;
@@ -24,15 +24,7 @@ header {
   margin-bottom: 30px;
 }
 
-/* Navigation */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  background: #4f46e5;
-  padding: 10px 0;
-  border-radius: 8px;
+nav {
   margin-top: 10px;
 }
 
@@ -43,6 +35,7 @@ nav a {
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s;
+  margin: 0 6px;
 }
 
 nav a:hover,
@@ -50,9 +43,9 @@ nav a.active {
   background-color: #3730a3;
 }
 
-/* Main Content Sections */
+/* === Sections === */
 main section {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
   background: white;
   padding: 30px;
@@ -60,104 +53,183 @@ main section {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Home page QR code */
+/* === Home QR === */
 #home-intro img {
   display: block;
   margin: 20px auto;
   max-width: 180px;
 }
 
-/* Chatbot */
-#chatbot {
-  max-width: 500px;
-  margin: 20px auto 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  background: #f1f1f1;
-}
-
-#chat-window {
-  height: 200px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-#chat-input {
-  width: 75%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  margin-right: 10px;
-}
-
-#chat-send {
-  padding: 10px 15px;
-  background-color: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#chat-send:hover {
-  background-color: #3730a3;
-}
-
-/* Forms */
+/* === Form Styles === */
 form label {
   font-weight: bold;
+  display: block;
+  margin-top: 15px;
 }
 
 form input, form textarea {
   width: 100%;
-  padding: 8px;
-  border-radius: 6px;
+  padding: 10px;
+  margin-top: 6px;
   border: 1px solid #ccc;
-  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 form button {
   background-color: #4f46e5;
   color: white;
   border: none;
-  padding: 10px 15px;
-  margin-top: 15px;
+  padding: 12px 20px;
+  margin-top: 20px;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 form button:hover {
   background-color: #3730a3;
 }
 
-.user-msg {
-  background: #4f46e5;
-  color: white;
-  padding: 8px 12px;
-  margin: 5px 0;
-  border-radius: 12px 12px 0 12px;
-  max-width: 75%;
-  align-self: flex-end;
+/* === Message Feedback === */
+#form-message {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.bot-msg {
-  background: #e0e7ff;
+/* === Skills Section === */
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 280px;
+}
+
+.skill-category h3 {
+  margin-bottom: 1rem;
+  color: #4f46e5;
+  font-weight: 700;
+  text-align: center;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 1rem;
   color: #333;
-  padding: 8px 12px;
-  margin: 5px 0;
-  border-radius: 12px 12px 12px 0;
-  max-width: 75%;
-  align-self: flex-start;
 }
 
-/* Chatbot Styles */
+.skill-item i {
+  color: #4f46e5;
+  margin-right: 10px;
+  font-size: 1.3rem;
+  width: 22px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4f46e5;
+  border-radius: 5px;
+  width: 0;
+  transition: width 1.2s ease-in-out;
+}
+
+/* === Projects === */
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-header h3 {
+  font-size: 1.2rem;
+}
+
+.project-date-inline {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.project-details p {
+  font-size: 0.95rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.project-links .btn-sm {
+  background-color: #4f46e5;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project-links .btn-sm:hover {
+  background-color: #3730a3;
+}
+
+/* === Chatbot Styles === */
 #chatbot-toggle {
   position: fixed;
   bottom: 20px;
@@ -204,137 +276,126 @@ form button:hover {
   box-sizing: border-box;
 }
 
-/* Project Section Styles */
-.projects {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.projects-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.projects-grid {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.project-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-image {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.project-content {
-  padding: 20px;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.project-header h3 {
-  font-size: 1.2rem;
-}
-
-.project-date-inline {
-  font-size: 0.9rem;
-  color: #888;
-}
-
-.project-details p {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-.project-tech {
-  margin: 10px 0;
-}
-
-.tech-tag {
-  display: inline-block;
-  background-color: #eef2ff;
-  color: #4f46e5;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-.project-links .btn-sm {
-  background-color: #4f46e5;
+/* Chat Messages */
+.user-msg {
+  background: #4f46e5;
   color: white;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 12px 12px 0 12px;
+  max-width: 75%;
+  align-self: flex-end;
 }
 
-.project-links .btn-sm:hover {
-  background-color: #3730a3;
+.bot-msg {
+  background: #e0e7ff;
+  color: #333;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 12px 12px 12px 0;
+  max-width: 75%;
+  align-self: flex-start;
 }
 
-.skills-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-.skill-category {
-  flex: 1;
-  min-width: 250px;
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-.skill-category h3 {
-  color: #4f46e5;
-  margin-bottom: 10px;
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
 }
 
-.skill-category ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #555;
+body.dark-mode nav a {
+  color: #ccc;
 }
 
-.skill-category ul li {
-  margin-bottom: 6px;
+body.dark-mode nav a:hover,
+body.dark-mode nav a.active {
+  background-color: #333399;
+  color: #fff;
+}
+
+body.dark-mode main section,
+body.dark-mode .skill-category,
+body.dark-mode .project-card {
+  background-color: #222;
+  color: #ddd;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode footer {
+  color: #aaa;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-mode form button {
+  background-color: #5555ff;
+}
+
+body.dark-mode form button:hover {
+  background-color: #4444dd;
+}
+
+body.dark-mode #chatbot-window {
+  background-color: #222;
+  border-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode .user-msg {
+  background: #5555ff;
+}
+
+body.dark-mode .bot-msg {
+  background: #444466;
+  color: #ccc;
+}
+#dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white; 
+  transition: color 0.3s ease;
+  z-index: 1100;
+}
+
+#dark-mode-toggle:hover {
+  color: #d1d5db; 
+}
+
+/* Making sure header is positioned relative for the absolute button */
+header {
+  position: relative;
 }

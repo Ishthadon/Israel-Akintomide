@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Israel Akintomide | Personal Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .hero-text {
+        max-width: 500px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,16 +48,24 @@
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" title="Toggle Dark Mode">🌓</button>
   </header>
 
   <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>I’m Israel Akintomide, an IT Support Specialist and Cybersecurity enthusiast based in Washington, D.C. Explore my skills, experience and projects in this portfolio.</p>
-
-      <h3>Scan to access my portfolio:</h3>
-      <img src="img/qrcode.png" alt="QR Code to Portfolio" style="max-width: 200px; display: block; margin: 20px auto;" />
+    <section class="hero">
+      <img src="img/israel.jpg" alt="Israel Akintomide Photo" />
+      <div class="hero-text">
+        <h2>Welcome</h2>
+        <p>
+          I’m <strong>Israel Akintomide</strong>, an IT Support Specialist and Cybersecurity enthusiast based in Washington, D.C.
+          Explore my skills, experience, and projects in this portfolio.
+        </p>
+      </div>
     </section>
+
+    <h3 style="text-align:center;">Scan to access my portfolio:</h3>
+    <img src="img/qrcode.png" alt="QR Code to Portfolio" style="max-width: 200px; display: block; margin: 20px auto;" />
   </main>
 
   <footer>
@@ -34,12 +73,13 @@
   </footer>
 
   <!-- Chatbot -->
-  <button id="chatbot-toggle">Chat</button>
-  <div id="chatbot-window">
+  <button id="chatbot-toggle" aria-label="Toggle chatbot">Chat</button>
+  <div id="chatbot-window" aria-live="polite" aria-hidden="true">
     <div id="chatbot-log"></div>
-    <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
+    <input type="text" id="chatbot-input" placeholder="Ask me anything..." aria-label="Chatbot input" />
   </div>
 
   <script src="js/chatbot.js"></script>
+  <script src="js/darkmode.js"></script>
 </body>
 </html>

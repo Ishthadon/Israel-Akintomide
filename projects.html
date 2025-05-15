@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects - Israel Akintomide</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     .project-image {
       width: 100%;
@@ -14,7 +14,6 @@
       overflow: hidden;
       border-radius: 8px;
     }
-
     .project-image img {
       width: 100%;
       height: 100%;
@@ -34,6 +33,8 @@
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
   </header>
 
   <main>
@@ -46,9 +47,9 @@
       <div class="projects-grid">
 
         <!-- Gmail Reverifier Project -->
-        <div class="project-card" data-project="Gmail_reverifier">
+        <div class="project-card" data-project="Gmail_reverifier" data-aos="fade-up" data-aos-delay="100">
           <div class="project-image">
-            <img src="img/Emails.jpg" alt="Emails">
+            <img src="img/Emails.jpg" alt="Emails" />
           </div>
           <div class="project-content">
             <div class="project-header">
@@ -56,14 +57,14 @@
               <span class="project-date-inline">May 12, 2025</span>
             </div>
             <p>
-              Developed a tool that automates Gmail re-verification using SMS-based validation and rotating proxies. 
+              Developed a tool that automates Gmail re-verification using SMS-based validation and rotating proxies.
               This project is tailored for users who manage bulk Gmail accounts and require seamless, large-scale account maintenance.
             </p>
             <div class="project-tech">
               <span class="tech-tag">JavaScript</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Ishthadon/Gmail_reverifier.git" target="_blank" class="btn btn-sm">
+              <a href="https://github.com/Ishthadon/Gmail_reverifier.git" target="_blank" rel="noopener" class="btn btn-sm">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
@@ -71,9 +72,9 @@
         </div>
 
         <!-- Housing Affordability Project -->
-        <div class="project-card" data-project="housing-affordability-analysis">
+        <div class="project-card" data-project="housing-affordability-analysis" data-aos="fade-up" data-aos-delay="200">
           <div class="project-image">
-            <img src="img/Housing Trends.jpg" alt="Housing Market Analysis">
+            <img src="img/Housing Trends.jpg" alt="Housing Market Analysis" />
           </div>
           <div class="project-content">
             <div class="project-header">
@@ -81,14 +82,14 @@
               <span class="project-date-inline">May 12, 2025</span>
             </div>
             <p>
-              Analyzed American Community Survey data to examine how mortgage burdens vary by income and race across California. 
+              Analyzed American Community Survey data to examine how mortgage burdens vary by income and race across California.
               The project culminated in actionable policy recommendations, including a $17M housing support proposal to address affordability gaps.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Jupyter Notebook</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Ishthadon/House_Affordability_Project.git" target="_blank" class="btn btn-sm">
+              <a href="https://github.com/Ishthadon/House_Affordability_Project.git" target="_blank" rel="noopener" class="btn btn-sm">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
@@ -96,9 +97,9 @@
         </div>
 
         <!-- Intrusion Detection Analysis -->
-        <div class="project-card" data-project="intrusion-detection">
+        <div class="project-card" data-project="intrusion-detection" data-aos="fade-up" data-aos-delay="300">
           <div class="project-image">
-            <img src="img/Intrusion Detection.jpg" alt="Intrusion Detection">
+            <img src="img/Intrusion Detection.jpg" alt="Intrusion Detection" />
           </div>
           <div class="project-content">
             <div class="project-header">
@@ -106,7 +107,7 @@
               <span class="project-date-inline">May 13, 2025</span>
             </div>
             <p>
-              Explored techniques for detecting suspicious account behavior in high-demand product environments. 
+              Explored techniques for detecting suspicious account behavior in high-demand product environments.
               Built tools to assess user authenticity and designed strategies for mitigating bot activity and ensuring secure digital drops.
             </p>
             <div class="project-tech">
@@ -114,7 +115,7 @@
               <span class="tech-tag">CSS</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Ishthadon/Intrusion_Detection_System_Analysis.git" target="_blank" class="btn btn-sm">
+              <a href="https://github.com/Ishthadon/Intrusion_Detection_System_Analysis.git" target="_blank" rel="noopener" class="btn btn-sm">
                 <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
@@ -125,19 +126,21 @@
     </section>
   </main>
 
-  <!-- Chatbot Integration -->
-  <button id="chatbot-toggle">Chat</button>
-  <div id="chatbot-window">
-    <div id="chatbot-log"></div>
-    <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
-  </div>
-
   <footer>
     <p>&copy; 2025 Israel Akintomide</p>
   </footer>
 
+  <!-- Chatbot -->
+  <button id="chatbot-toggle" aria-label="Toggle chatbot">Chat</button>
+  <div id="chatbot-window" aria-live="polite" aria-hidden="true">
+    <div id="chatbot-log"></div>
+    <input type="text" id="chatbot-input" placeholder="Ask me anything..." aria-label="Chatbot input" />
+  </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/chatbot.js"></script>
-</body>
+  </body>
 </html>

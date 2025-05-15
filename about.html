@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Israel Akintomide</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .accordion {
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+    .accordion-header {
+      background: #4f46e5;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-body {
+      padding: 20px;
+      display: none;
+      background: #f9f9f9;
+    }
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+    .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #4f46e5;
+    }
+    .stat-block {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    .stat {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,24 +69,53 @@
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" title="Toggle dark mode">🌙</button>
   </header>
 
   <main>
-    <section>
-      <h2>Who I Am</h2>
-      <p>I am an IT Help Desk and Cybersecurity professional with a B.S. in Computer Technology from Bowie State University (May 2024). I’m experienced in Active Directory, VPNs, ServiceNow, and cybersecurity tools.</p>
-      <h3>Certifications</h3>
-      <ul>
-        <li>ISC2 Certified in Cybersecurity</li>
-        <li>CompTIA Network+</li>
-      </ul>
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Windows, macOS, Linux (Ubuntu/Kali)</li>
-        <li>Azure, AWS, VPN, RDP, Office 365</li>
-        <li>Splunk, Wireshark, Nessus, Metasploit, Nmap</li>
-      </ul>
+    <section class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">👤 Who I Am <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <p>I am an IT Help Desk and Cybersecurity professional with a B.S. in Computer Technology from Bowie State University (May 2024). I’m experienced in Active Directory, VPNs, ServiceNow and cybersecurity tools.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">📜 Certifications <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <ul>
+            <li>ISC2 Certified in Cybersecurity</li>
+            <li>CompTIA Network+</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">🛠️ Technical Skills <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <ul>
+            <li>Windows, macOS, Linux (Ubuntu/Kali)</li>
+            <li>Azure, AWS, VPN, RDP, Office 365</li>
+            <li>Splunk, Wireshark, Nessus, Metasploit, Nmap</li>
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <div class="stat-block">
+      <div class="stat">
+        <div class="counter" data-count="4">0</div>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <div class="counter" data-count="2">0</div>
+        <p>Certifications</p>
+      </div>
+      <div class="stat">
+        <div class="counter" data-count="15">0</div>
+        <p>Tools Mastered</p>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -47,6 +128,34 @@
     <div id="chatbot-log"></div>
     <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
   </div>
+
   <script src="js/chatbot.js"></script>
+  <script>
+    
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Counter animation
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-count');
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / 50);
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
 </body>
 </html>
