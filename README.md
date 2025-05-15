@@ -57,4 +57,4 @@ This portfolio includes:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Ishthadon/personal-portfolio.git
+   https://github.com/Ishthadon/personal-portfolio.git
