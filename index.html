@@ -2,34 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - Israel Akintomide</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Israel Akintomide</h1>
-    <p>Welcome to my personal portfolio website.</p>
-    <img src="assets/qr-code.png" alt="QR Code to portfolio" width="150" />
+    <h1>Israel Akintomide</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>This is a showcase of my skills, projects and resume.</p>
+    <section id="home-intro">
+      <h2>Welcome!</h2>
+      <p>Hello! I’m Israel Akintomide, a passionate developer specializing in web development. Explore my portfolio to learn more about my skills, projects, and experience.</p>
+      <img src="img/qrcode.png" alt="QR code linking to portfolio" />
+      <p>Scan this QR code or visit <a href="index.html">my portfolio</a> anytime!</p>
+    </section>
+
+    <section id="chatbot-section">
+      <h2>Ask Me!</h2>
+      <div id="chatbot">
+        <div id="chat-window"></div>
+        <input type="text" id="chat-input" placeholder="Ask me about my skills, projects, or experience..." />
+        <button id="chat-send">Send</button>
+      </div>
     </section>
   </main>
 
-  <script src="js/chatbot.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 </html>
