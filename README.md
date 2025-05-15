@@ -58,4 +58,4 @@ To run locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ishthadon/Israel_Akintomide.git
+   git clone https://github.com/Ishthadon/personal-portfolio.git
