@@ -4,12 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("chatbot-input");
   const log = document.getElementById("chatbot-log");
 
-  // Show/hide chatbot
+  // Toggle chatbot window
   toggleBtn.addEventListener("click", () => {
-    chatbotWindow.classList.toggle("active");
+    chatbotWindow.classList.toggle("open");
+
+    // Show welcome message once
+    if (chatbotWindow.classList.contains("open") && log.innerHTML.trim() === "") {
+      appendMessage("Bot", "👋 Hi there! Ask me about my skills, projects, resume or how to contact me.");
+    }
   });
 
-  // Handle input
+  // Handle user input
   input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       const userMessage = input.value.trim();
@@ -21,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Append a message to the chat log
   function appendMessage(sender, message) {
     const msg = document.createElement("div");
     msg.className = "chat-message";
@@ -29,21 +35,26 @@ document.addEventListener("DOMContentLoaded", function () {
     log.scrollTop = log.scrollHeight;
   }
 
+  // Simple bot logic
   function respondTo(message) {
-    let response = "I'm not sure how to answer that.";
+    let response = "🤔 I'm not sure how to answer that. Try asking about my skills, projects or resume!";
 
     if (message.includes("hello") || message.includes("hi")) {
-      response = "Hello! How can I help you with my portfolio?";
+      response = "👋 Hello! How can I help you with my portfolio?";
     } else if (message.includes("name")) {
-      response = "My name is Israel Akintomide.";
+      response = "🧑 My name is Israel Akintomide.";
     } else if (message.includes("skills")) {
-      response = "I'm skilled in IT support, cybersecurity, AWS, Azure, and more.";
+      response = "🛠️ I’m skilled in IT support, cybersecurity, AWS, Azure, JavaScript, Python and more.";
     } else if (message.includes("resume")) {
-      response = "You can view and download my resume on the Resume page.";
+      response = "📄 You can view and download my resume from the Resume page.";
     } else if (message.includes("project")) {
-      response = "I’ve worked on honeypots, SHA256 password cracking tools, and proxy-based automation.";
+      response = "💡 I’ve worked on projects like honeypots, SHA256 password crackers and proxy automation.";
     } else if (message.includes("contact")) {
-      response = "Feel free to use the contact form on the Contact page!";
+      response = "📬 You can reach me via the contact form on the Contact page!";
+    } else if (message.includes("tip") || message.includes("help")) {
+      response = "💡 Try asking things like:\n- What are your skills?\n- Show me your projects\n- How do I contact you?";
+    } else if (message.includes("dark")) {
+      response = "🌙 Dark mode feature is coming soon!";
     }
 
     appendMessage("Bot", response);

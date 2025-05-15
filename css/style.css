@@ -238,6 +238,9 @@ form button:hover {
   width: 100%;
   height: 180px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image img {
@@ -299,6 +302,7 @@ form button:hover {
 .project-links .btn-sm:hover {
   background-color: #3730a3;
 }
+
 .skills-section {
   max-width: 900px;
   margin: 40px auto;
