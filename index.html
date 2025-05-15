@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home - Israel Akintomide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Israel Akintomide | Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <h1>Israel Akintomide</h1>
     <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="home-intro">
-      <h2>Welcome!</h2>
-      <p>Hello! I’m Israel Akintomide, a passionate developer specializing in web development. Explore my portfolio to learn more about my skills, projects, and experience.</p>
-      <img src="img/qrcode.png" alt="QR code linking to portfolio" />
-      <p>Scan this QR code or visit <a href="index.html">my portfolio</a> anytime!</p>
-    </section>
-
-    <section id="chatbot-section">
-      <h2>Ask Me!</h2>
-      <div id="chatbot">
-        <div id="chat-window"></div>
-        <input type="text" id="chat-input" placeholder="Ask me about my skills, projects, or experience..." />
-        <button id="chat-send">Send</button>
-      </div>
+    <section>
+      <h2>Welcome</h2>
+      <p>I’m Israel Akintomide, an IT Support Specialist and Cybersecurity enthusiast based in Washington, D.C. Explore my skills, experience, and projects in this portfolio.</p>
     </section>
   </main>
 
-  <script src="chatbot.js"></script>
+  <footer>
+    <p>&copy; 2025 Israel Akintomide</p>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chatbot-toggle">Chat</button>
+  <div id="chatbot-window">
+    <div id="chatbot-log"></div>
+    <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
+  </div>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>
