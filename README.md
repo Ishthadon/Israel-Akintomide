@@ -36,7 +36,6 @@ This portfolio includes:
 
 - **Dark Mode** toggle
 - **Chatbot Assistant** (answers about my name, resume, skills, etc.)
-- Animated skill bars using **AOS**
 - Fully responsive and accessible design
 - Modern and clean UI
 
@@ -45,17 +44,17 @@ This portfolio includes:
 ## 💻 Technologies Used
 
 - HTML5 & CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - Font Awesome
-- AOS (Animate On Scroll)
 - Git & GitHub
 
 ---
 
 ## 🚀 Setup Instructions
 
-To run locally:
+## 🚀 To Run Locally
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Ishthadon/personal-portfolio.git
