@@ -4,50 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects - Israel Akintomide</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Projects</h1>
+    <h1>Israel Akintomide</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Featured Projects</h2>
-      <ul>
-        <li>
-          <strong>Network Analysis & Peer-to-Peer Service</strong><br/>
-          Bypassed firewalls for limited retail drops using proxies & VMs. 2000+ orders fulfilled.
-        </li>
-        <li>
-          <strong>Honeypot (Kippo)</strong><br/>
-          Deployed a Linux VM to simulate vulnerable SSH service to learn attacker behavior.
-        </li>
-        <li>
-          <strong>SHA256 Password Cracker (Python)</strong><br/>
-          Demonstrated SHA256 hashing & brute-force concepts for educational use.
-        </li>
-      </ul>
+    <section id="projects" class="projects">
+      <div class="projects-header" data-aos="fade-up">
+        <h2 class="section-title">My Projects</h2>
+        <p class="section-subtitle">A showcase of my work and contributions</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Gmail Reverifier Project -->
+        <div class="project-card" data-project="Gmail_reverifier">
+          <div class="project-image">
+            <img src="img/Emails.jpg" alt="Emails">
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Gmail Reverifier</h3>
+              <span class="project-date-inline">April 2022</span>
+            </div>
+            <p>
+              Designed to bypass Google's periodic account re-verification. It supports automated SMS-based Gmail validation using proxies.
+              Intended for users managing large numbers of Gmail accounts.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Jupyter Notebook</span>
+              <span class="tech-tag">Automation</span>
+              <span class="tech-tag">Proxy Integration</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ishthadon/Gmail_reverifier.git" target="_blank" class="btn btn-sm">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Housing Affordability Project -->
+        <div class="project-card" data-project="housing-affordability-analysis">
+          <div class="project-image">
+            <img src="img/Housing Trends.jpg" alt="Housing Market Analysis">
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>California Housing Affordability Trends</h3>
+              <span class="project-date-inline">2017–2022</span>
+            </div>
+            <p>
+              Conducted in-depth data analysis using ACS data comparing mortgage burden across income and race groups in California.
+              Proposed policy-driven solutions including a $17 million support initiative.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Excel</span>
+              <span class="tech-tag">Data Visualization</span>
+              <span class="tech-tag">Statistical Analysis</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ishthadon/House_Affordability_Project.git" target="_blank" class="btn btn-sm">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intrusion Detection Analysis -->
+        <div class="project-card" data-project="intrusion-detection">
+          <div class="project-image">
+            <img src="img/Intrusion Detection.jpg" alt="Intrusion Detection">
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3>Intrusion Detection System Analysis</h3>
+              <span class="project-date-inline">July 2022</span>
+            </div>
+            <p>
+              Built custom tools for account uniqueness and bot detection evasion during online drops.
+              Applied intrusion detection theory to manage hyped-item transactions securely.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">Console App</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ishthadon/Intrusion_Detection_System_Analysis.git" target="_blank" class="btn btn-sm">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Israel Akintomide</p>
-  </footer>
-
-  <!-- Chatbot -->
+  <!-- Chatbot Integration -->
   <button id="chatbot-toggle">Chat</button>
   <div id="chatbot-window">
     <div id="chatbot-log"></div>
     <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
   </div>
+
+  <footer>
+    <p>&copy; 2025 Israel Akintomide</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/chatbot.js"></script>
 </body>
 </html>
